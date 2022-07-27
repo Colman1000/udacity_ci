@@ -11,11 +11,12 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: echo << ME_NAME >>
-print_last:
-  docker:
-    - image: circleci/node:13.8.0
-  steps:
-    - run: echo << ME_NAME >>
+
+  print_last:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run: echo << DOLLAR >>
 workflows:
   default:
     jobs:
